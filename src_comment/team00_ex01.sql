@@ -48,3 +48,16 @@ SELECT total_cost, tour
 FROM min_and_max_routes
 ORDER BY total_cost, tour;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
