@@ -1,10 +1,7 @@
--- ==========================================
--- ЗАДАЧА КОММИВОЯЖЁРА - OPPOSITE TSP
--- Вывод MIN и MAX маршрутов
--- ==========================================
+
 
 WITH RECURSIVE building_routes AS (
-    -- База рекурсии: начинаем путь с города 'a'
+
     SELECT
         ARRAY['a']::varchar[]  AS visited_cities,
         'a'::CHAR(1)           AS current_city,
@@ -12,7 +9,7 @@ WITH RECURSIVE building_routes AS (
     
     UNION ALL
     
-    -- Рекурсивный шаг: добавляем непосещённые города
+
     SELECT
         routes.visited_cities || ARRAY[edges.point2]::varchar[],
         edges.point2,
@@ -23,7 +20,7 @@ WITH RECURSIVE building_routes AS (
 ),
 
 complete_cycles AS (
-    -- Завершаем маршруты возвратом в начальную точку 'a'
+
     SELECT
         routes.accumulated_cost + return_edge.cost AS total_cost,
         '{' || array_to_string(routes.visited_cities || ARRAY['a']::varchar[], ',') || '}' AS tour
@@ -37,7 +34,7 @@ complete_cycles AS (
 ),
 
 min_and_max_routes AS (
-    -- Отбираем маршруты с минимальной и максимальной стоимостью
+
     SELECT total_cost, tour
     FROM complete_cycles
     WHERE total_cost = (SELECT MIN(total_cost) FROM complete_cycles)
