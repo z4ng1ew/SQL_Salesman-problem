@@ -1,19 +1,11 @@
--- ==========================================
--- TEAM00 Exercise 00: Classical TSP
--- ИСПРАВЛЕННЫЙ ФОРМАТ ВЫВОДА
--- ==========================================
-
--- Удаляем таблицу если существует
 DROP TABLE IF EXISTS tsp CASCADE;
 
--- Создаём таблицу графа
 CREATE TABLE tsp (
     point1 CHAR(1),
     point2 CHAR(1),
     cost   INT
 );
 
--- Заполняем данными (все рёбра двусторонние)
 INSERT INTO tsp VALUES
 ('a','b',10), ('b','a',10),
 ('a','c',15), ('c','a',15),
@@ -22,15 +14,12 @@ INSERT INTO tsp VALUES
 ('b','d',25), ('d','b',25),
 ('c','d',30), ('d','c',30);
 
--- Рекурсивный запрос для поиска туров
 WITH RECURSIVE tour AS (
     SELECT
         ARRAY['a']::varchar[]  AS path,
         'a'::CHAR(1)           AS last_point,
         0                      AS total_cost
-    
     UNION ALL
-    
     SELECT
         tour.path || ARRAY[tsp.point2]::varchar[],
         tsp.point2,
@@ -42,7 +31,6 @@ WITH RECURSIVE tour AS (
 finished_tours AS (
     SELECT
         tour.total_cost + tsp.cost AS total_cost,
-        -- ИСПРАВЛЕНО: Преобразуем массив в строку с фигурными скобками
         '{' || array_to_string(tour.path || ARRAY['a']::varchar[], ',') || '}' AS tour
     FROM tour
     JOIN tsp ON tsp.point1 = tour.last_point 
