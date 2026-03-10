@@ -306,6 +306,21 @@ WITH RECURSIVE building_routes AS (
         routes.visited_cities || ARRAY[edges.point2]::varchar[],
         
 
+
+-- visited_cities - это НЕ "алиас массива"
+-- Это КОЛОНКА, которая ХРАНИТ массив
+
+-- -- visited_cities - это название КОЛОНКИ:
+-- SELECT
+--     ARRAY['a']::varchar[] AS visited_cities  ← КОЛОНКА
+    
+-- -- routes.visited_cities - обращение к КОЛОНКЕ:
+-- routes.visited_cities
+--   ↑         ↑
+-- таблица   колонка
+
+-- -- Это не "алиас массива", это "колонка с типом массив"
+
 -- -- Текущее состояние:
 -- routes.visited_cities = {a,b}
 -- routes.current_city = 'b'
