@@ -1,39 +1,3 @@
-## _Traveling Salesman Problem_
-
-In this team project you will use SQL to solve the classic Traveling Salesman Problem (TSP). You will learn to model graphs and routes, create tables with nodes and travel costs, and write queries to find the cheapest paths and analyze the results.
-
-These skills will help you with optimization, data analysis, and building information systems—valuable in business analytics, software development, and IT infrastructure management.
-
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
-
-## Contents
-
-- [_Traveling Salesman Problem_](#traveling-salesman-problem)
-- [Contents](#contents)
-- [How to learn at «School 21»](#how-to-learn-at-school-21)
-- [Chapter I](#chapter-i)
-- [Preamble](#preamble)
-- [Chapter II](#chapter-ii)
-- [Rules of the day](#rules-of-the-day)
-- [Chapter III](#chapter-iii)
-- [Exercise 00 — Classical TSP](#exercise-00--classical-tsp)
-- [Exercise 01 — Opposite TSP](#exercise-01--opposite-tsp)
-
-## How to learn at «School 21»
-1. «School 21» might feel different from your previous educational experiences. It emphasizes high autonomy: you’re given a task, and you must complete it. Throughout the course, you are expected to delve deeper into the subject and solve problems. Use all available means to find information—the resources of the internet are limitless. Be mindful of your sources (for example, if you use AI tools): verify, think, analyze, and compare.
-2. You will need to present your solution to other students and receive feedback from them. Peer-to-peer (P2P) learning is a process where students exchange knowledge and experience, simultaneously acting as both mentors and learners. This way you can learn not only from materials but also from each other.
-3. Don’t hesitate to ask for help: around you are peers who are also navigating this path for the first time. Likewise, don’t be afraid to respond to requests for help—your experience is valuable and useful, so share it openly with others. Join RocketChat to stay updated with the latest community announcements.
-4. Your learning will be meaningless if you simply copy others’ solutions. If you receive help, always make sure you fully understand the why, how, and purpose behind it. Don’t be afraid to make mistakes.
-5. If you’re stuck on something and feel like you’ve tried everything but still don’t know what to do—just take a break! Believe it or not, this advice has helped many professionals in their work. Step away, clear your mind, and the right solution might just come to you next time!
-6. The learning process is just as important as the result. It’s not just about solving the task—it’s about understanding how to solve it.
-
-How to work with the project: 
-1. Before starting, clone the project from GitLab into a repository of the same name.
-2. All code files must be created in the src/ folder of the cloned repository.
-3. After cloning, create a develop branch and push changes to it in GitLab. Push to GitLab in the develop branch as well.
-
-## Chapter I
-## Preamble
 
 ![T00_01](misc/images/T00_01.png)
 
